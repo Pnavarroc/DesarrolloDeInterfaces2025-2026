@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.togglebutton.HelloController">
+   <children>
+      <ToggleButton layoutX="166.0" layoutY="110.0" mnemonicParsing="false" text="Zaragoza">
+         <toggleGroup>
+            <ToggleGroup fx:id="Aragón" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="166.0" layoutY="150.0" mnemonicParsing="false" text="Huesca" toggleGroup="$Aragón" />
+      <ToggleButton layoutX="166.0" layoutY="188.0" mnemonicParsing="false" text="Teruel" toggleGroup="$Aragón" />
+      <RadioButton layoutX="172.0" layoutY="229.0" mnemonicParsing="false" text="Zaragoza">
+         <toggleGroup>
+            <ToggleGroup fx:id="Aragón2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="172.0" layoutY="263.0" mnemonicParsing="false" text="Huesca" toggleGroup="$Aragón2" />
+      <RadioButton layoutX="178.0" layoutY="296.0" mnemonicParsing="false" text="Teruel" toggleGroup="$Aragón2" />
+      <Label layoutX="152.0" layoutY="337.0" text="Selección:" />
+      <TextField layoutX="232.0" layoutY="342.0" />
+   </children>
+</AnchorPane>
