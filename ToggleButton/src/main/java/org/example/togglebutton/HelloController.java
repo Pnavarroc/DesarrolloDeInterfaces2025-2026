@@ -8,10 +8,10 @@ import javafx.scene.control.ToggleButton;
 public class HelloController {
 
     @FXML
-    private ToggleButton zaragoza
+    private ToggleButton zaragoza;
     @FXML
-    private ToggleButton huesca
+    private ToggleButton huesca;
     @FXML
-    private ToggleButton teruel
-    @FXML
+    private ToggleButton teruel;
+
 }
