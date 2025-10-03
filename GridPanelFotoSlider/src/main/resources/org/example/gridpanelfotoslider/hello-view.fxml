@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gridpanelfotoslider.HelloController">
+   <children>
+      <VBox layoutX="25.0" layoutY="14.0" prefHeight="371.0" prefWidth="553.0">
+         <children>
+            <Slider fx:id="slider" onMouseReleased="#cambiarTamaño" prefHeight="14.0" prefWidth="345.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="20.0" />
+               </VBox.margin>
+            </Slider>
+            <ImageView fx:id="perro" fitHeight="150.0" fitWidth="200.0" onDragDetected="#cambiarTamaño" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@Imagenes/Perro.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
