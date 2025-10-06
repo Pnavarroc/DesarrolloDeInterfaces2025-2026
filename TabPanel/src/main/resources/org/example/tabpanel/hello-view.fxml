@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tabpanel.HelloController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="4.0" prefHeight="385.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="Infinity">
+        <tabs>
+          <Tab fx:id="datosConductor" text="Datos conductor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="219.0" prefWidth="398.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nombre">
+                                 <GridPane.margin>
+                                    <Insets left="140.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Apellidos" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="140.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="nombre" GridPane.columnIndex="1" />
+                              <TextField fx:id="apellidos" prefHeight="25.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="coche" mnemonicParsing="false" onAction="#oCocheOMonovolumen" text="Coche" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="monovolumen" mnemonicParsing="false" onAction="#oCocheOMonovolumen" text="Monovolumen" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/cara.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="pantallaCoche" text="Coche">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/coche.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="pantallaMonovolumen" text="Monovolumen">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/monovolumen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
