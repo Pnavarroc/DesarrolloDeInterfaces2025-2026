@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class HelloController {
     @FXML
     private TextField nombre;
@@ -32,13 +34,27 @@ public class HelloController {
     protected void initialize(){
 
     }
-    @FXML
-    protected void cambiarADni(){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ayudadni.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage stage = new Stage();
 
+
+    @FXML
+    public void avisoLegal() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ventana-ayuda-2.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load(), 600, 600);
+        Stage stage2= new Stage();
+        stage2.setTitle("Aviso legal y politica de privacidad");
+        stage2.setScene(scene2);
+        stage2.show();
     }
+    @FXML
+    public void fechaExpedicion() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ayudadni.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load(), 600, 600);
+        Stage stage2= new Stage();
+        stage2.setTitle("Fecha de Expedicion");
+        stage2.setScene(scene2);
+        stage2.show();
+    }
+
 
 
 }

@@ -7,14 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static javafx.application.Application.launch;
+
 public class ControladorVentanaDni{
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ayudadni.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-        stage.setTitle("Fecha expedición");
-        stage.setScene(scene);
-        stage.show();
+    public static void main(String[] args) {
+        launch();
     }
 
 

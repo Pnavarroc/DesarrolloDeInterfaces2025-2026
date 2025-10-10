@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tabpaneldni.HelloController">
    <children>
       <VBox layoutX="133.0" layoutY="11.0" prefHeight="378.0" prefWidth="334.0">
@@ -50,7 +49,7 @@
             <HBox prefHeight="42.0" prefWidth="334.0">
                <children>
                   <TextField fx:id="fechaExpedicion" prefHeight="25.0" prefWidth="281.0" />
-                  <Button fx:id="informacion" mnemonicParsing="false" onAction="#cambiarADni">
+                  <Button fx:id="informacion" mnemonicParsing="false" onAction="#fechaExpedicion">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -79,7 +78,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </CheckBox>
-            <Button fx:id="enviarMensaje" mnemonicParsing="false" text="Enviar mensaje">
+            <Button fx:id="enviarMensaje" mnemonicParsing="false" onAction="#avisoLegal" onMousePressed="#avisoLegal" text="Enviar mensaje">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>

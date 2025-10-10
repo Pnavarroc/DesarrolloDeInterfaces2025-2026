@@ -7,15 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControladorVentanaAyuda2{
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ventana-ayuda-2.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-        stage.setTitle("Aviso legal y politica de privacidad");
-        stage.setScene(scene);
-        stage.show();
-    }
+import static javafx.application.Application.launch;
 
+public class ControladorVentanaAyuda2{
+    public static void main(String[] args) {
+        launch();
+    }
 
 }
