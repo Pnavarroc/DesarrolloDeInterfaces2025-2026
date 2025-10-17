@@ -1,12 +1,9 @@
 package org.example.conectarbd;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.IOException;
 import java.sql.*;
 
 public class HelloController {
@@ -38,12 +35,42 @@ public class HelloController {
     private Button ultimoRegistro;
 
     @FXML
+    Connection con;
+    @FXML
+    private Button nuevoRegistro;
+
+    @FXML
+    private Button guardar;
+
+    @FXML
+    private Button añadirAlaTablaButton;
+
+    @FXML
+    private TableView<Empleado> tabla;
+
+    @FXML
+    private TableColumn<Empleado,String> cNombre;
+
+    @FXML
+    private TableColumn<Empleado,String> cApellidos;
+
+    @FXML
+    private TableColumn<Empleado,String> cLocalidad;
+
+    @FXML
+    private TableColumn<Empleado,Double> cSalario;
+
+
+
+    @FXML
     protected void initialize(){
 
         try {
-        Connection con = DriverManager.getConnection(URL,USUARIO,PASSWD);
+         con = DriverManager.getConnection(URL,USUARIO,PASSWD);
             Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             String consulta= "SELECT Nombre,Apellidos,Localidad,Salario from datos.empleados";
+
+
             rs = statement.executeQuery(consulta);
 
             if (rs.next()) {
@@ -57,6 +84,18 @@ public class HelloController {
             throw new RuntimeException(e);
         }
     }
+
+
+    @FXML
+    protected void ponerCamposVacios(){
+        nombre.clear();
+        apellidos.clear();
+        localidad.clear();
+        salario.clear();
+
+    }
+
+
 
     @FXML
     protected void pasarAlPrimerRegistro(){
@@ -123,6 +162,39 @@ public class HelloController {
         }
     }
 
+    @FXML
+    protected void guardarRegistro(){
+        try {
+            String meterdatos= "INSERT INTO empleados VALUES(?,?,?,?)";
+            PreparedStatement preparedStatement = con.prepareStatement(meterdatos);
+            preparedStatement.setString(1,nombre.getText());
+            preparedStatement.setString(2,apellidos.getText());
+            preparedStatement.setString(3,localidad.getText());
+            preparedStatement.setInt(4,Integer.parseInt(salario.getText()));
+
+            preparedStatement.executeUpdate();
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("Empleado guardado");
+            alerta.setContentText("Eres un crack");
+            alerta.show();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @FXML
+    protected void anadirALaTabla(){
+
+        cNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        cApellidos.setCellValueFactory(new PropertyValueFactory<>("apellidos"));
+        cLocalidad.setCellValueFactory(new PropertyValueFactory<>("localidad"));
+        cSalario.setCellValueFactory(new PropertyValueFactory<>("salario"));
+
+        Empleado empleados = new Empleado(nombre.getText(),apellidos.getText(),localidad.getText(),Double.parseDouble(salario.getText()));
+        tabla.getItems().add(empleados);
+    }
 
 
 
