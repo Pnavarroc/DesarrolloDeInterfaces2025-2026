@@ -6,12 +6,12 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
-      <assistant-state connection-id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+      <assistant-state connection-id="c5626aad-be81-4361-8950-698629de7377" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
         <conversations />
       </assistant-state>
     </assistants>
@@ -23,8 +23,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb">
-      <console name="datos" type="STANDARD" schema="mysql" session="Main"><![CDATA[SELECT * FROM datos.empleados;]]></console>
+    <connection id="c5626aad-be81-4361-8950-698629de7377">
+      <console name="capitales" type="STANDARD" schema="mysql" session="Main"><![CDATA[SELECT * FROM capitales.capitales]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -32,14 +32,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb" object-ref="consoles/datos" />
+      <object connection-id="c5626aad-be81-4361-8950-698629de7377" object-ref="consoles/capitales" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb" dataset="capitales.capitales" active-filter-id="" />
+    <connection id="c5626aad-be81-4361-8950-698629de7377" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -50,9 +47,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection source-id="" id="3837a3b5-d7d9-46a0-a30d-4a072d36a5eb" active="true" signed="true">
+      <connection source-id="" id="c5626aad-be81-4361-8950-698629de7377" active="true" signed="true">
         <database>
-          <name value="datos" />
+          <name value="capitales" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />

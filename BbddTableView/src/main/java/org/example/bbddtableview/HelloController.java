@@ -103,13 +103,15 @@ public class HelloController {
     protected void mostrarEnLaTabla(){
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ventana_tabla.fxml"));
         try {
+
             localidad.getText();
             Scene scene = new Scene(fxmlLoader.load(),600,600);
             Stage stage = new Stage();
+            stage.show();
             stage.setTitle("Mostrar localudades");
             stage.setScene(scene);
 
-            stage.show();
+
 
 
 
