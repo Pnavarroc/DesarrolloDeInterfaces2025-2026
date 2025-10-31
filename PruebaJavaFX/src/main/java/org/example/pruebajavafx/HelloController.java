@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.controlsfx.control.RangeSlider;
 import org.controlsfx.control.SearchableComboBox;
 
 import java.sql.*;
@@ -20,6 +21,9 @@ public class HelloController {
     Connection con;
     @FXML
     private ResultSet rs;
+
+    @FXML
+    private RangeSlider rangeSlider;
 
     @FXML
     private TableView<Capitales> tablaCapitales;
@@ -57,9 +61,25 @@ public class HelloController {
 
                 searchableComboBox.getItems().add(capitales.getProvincia());
 
-
-
             }
+            rangeSlider.setShowTickLabels(true);
+            rangeSlider.setShowTickMarks(true);
+            rangeSlider.setMajorTickUnit(500000);
+            rangeSlider.setMinorTickCount(0);
+            String consultaMinimo= "SELECT Población FROM capitales.capitales ORDER BY Población ASC limit 1";
+            String consultaMaximo= "SELECT Población FROM capitales.capitales ORDER BY Población DESC limit 1";
+            rs = statement.executeQuery(consultaMinimo);
+            if (rs.next()){
+                rangeSlider.setMin(Double.parseDouble(rs.getString(1)));
+                rangeSlider.setLowValue(Double.parseDouble(rs.getString(1)));
+            }
+            rs = statement.executeQuery(consultaMaximo);
+            if (rs.next()){
+                rangeSlider.setMax(Double.parseDouble(rs.getString(1)));
+                rangeSlider.setHighValue(Double.parseDouble(rs.getString(1)));
+            }
+
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -86,6 +106,27 @@ public class HelloController {
             throw new RuntimeException(e);
         }
 
+    }
+
+    @FXML
+    protected void mostrarRango(){
+        try {
+            tablaCapitales.getItems().clear();
+            String consulta = "SELECT * FROM capitales.capitales WHERE Población BETWEEN '"+ rangeSlider.getLowValue()+"' AND '"+ rangeSlider.getHighValue() +"' ORDER BY Población DESC;";
+            rs= statement.executeQuery(consulta);
+
+            while (rs.next()){
+                tProvincia.setCellValueFactory(new PropertyValueFactory<>("provincia"));
+                tAutonomia.setCellValueFactory(new PropertyValueFactory<>("autonomia"));
+                tPoblacion.setCellValueFactory(new PropertyValueFactory<>("poblacion"));
+                Capitales capitales = new Capitales(rs.getString("Provincia"),rs.getString("Autonomía")
+                        , Integer.parseInt(rs.getString("Población")));
+                tablaCapitales.getItems().add(capitales);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
