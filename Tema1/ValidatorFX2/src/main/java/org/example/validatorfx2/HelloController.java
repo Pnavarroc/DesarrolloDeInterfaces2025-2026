@@ -6,8 +6,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class HelloController {
     @FXML
@@ -57,16 +56,16 @@ public class HelloController {
 
        // Media media = new Media(cancion1);
 
-        MediaPlayer mediaPlayer = new MediaPlayer(new Media(new File("./musica/music1.mp3").toURI().toString()));
+        AtomicReference<MediaPlayer> mediaPlayer = new AtomicReference<>(new MediaPlayer(new Media(new File("./musica/music1.mp3").toURI().toString())));
 
-        menuCancion1.setOnAction(e->mediaPlayer = new MediaPlayer(new Media(new File("./musica/music1.mp3").toURI().toString()));
-        menuCancion2.setOnAction(e->mediaPlayer = new MediaPlayer(new Media(new File("./musica/music2.mp3").toURI().toString()));
-        menuCancion3.setOnAction(e->mediaPlayer = new MediaPlayer(new Media(new File("./musica/music3.mp3").toURI().toString()));
+        menuCancion1.setOnAction(e-> mediaPlayer.set(new MediaPlayer(new Media(new File("./musica/music1.mp3").toURI().toString()))));
+        menuCancion2.setOnAction(e-> mediaPlayer.set(new MediaPlayer(new Media(new File("./musica/music2.mp3").toURI().toString()))));
+        menuCancion3.setOnAction(e-> mediaPlayer.set(new MediaPlayer(new Media(new File("./musica/music3.mp3").toURI().toString()))));
 
 
-        iniciar.setOnAction(e->mediaPlayer.play());
-        pausar.setOnAction(e->mediaPlayer.pause());
-        acabar.setOnAction(e->mediaPlayer.stop());
+        iniciar.setOnAction(e-> mediaPlayer.get().play());
+        pausar.setOnAction(e-> mediaPlayer.get().pause());
+        acabar.setOnAction(e-> mediaPlayer.get().stop());
 
 
 

@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@estilos2.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejercicio3cambiardeestilos.HelloController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejercicio3cambiardeestilos.HelloController">
    <children>
-      <Button layoutX="189.0" layoutY="95.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 1" />
-      <Button layoutX="189.0" layoutY="149.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 2" />
-      <Button layoutX="189.0" layoutY="200.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 3" />
-      <Button layoutX="189.0" layoutY="255.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Resetear" />
+      <Button fx:id="estilos1" layoutX="189.0" layoutY="95.0" mnemonicParsing="false" onAction="#cambiarEstilos1" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 1" />
+      <Button fx:id="estilos2" layoutX="189.0" layoutY="149.0" mnemonicParsing="false" onAction="#cambiarEstilos2" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 2" />
+      <Button fx:id="estilos3" layoutX="189.0" layoutY="200.0" mnemonicParsing="false" onAction="#cambiarEstilos3" prefHeight="42.0" prefWidth="166.0" text="Aplicar Estilo 3" />
+      <Button fx:id="resetear" layoutX="189.0" layoutY="255.0" mnemonicParsing="false" onAction="#resetear" prefHeight="42.0" prefWidth="166.0" text="Resetear" />
       <Button layoutX="189.0" layoutY="305.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" text="Salir" />
-      <Label layoutX="178.0" layoutY="46.0" prefHeight="35.0" prefWidth="244.0" text="Aplicacion de estilo">
+      <Label fx:id="titulo" layoutX="178.0" layoutY="46.0" prefHeight="35.0" prefWidth="244.0" text="Aplicacion de estilo">
          <font>
             <Font size="24.0" />
          </font>

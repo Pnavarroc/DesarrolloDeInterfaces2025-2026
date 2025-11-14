@@ -1,0 +1,82 @@
+/* --- CheckBox --- */
+.check-box .box {
+    -fx-background-color: #f0f0f0; /* Fondo gris claro */
+    -fx-border-color: #4CAF50;     /* Borde verde */
+    -fx-border-radius: 2px;
+    -fx-padding: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #FFFFFF; /* Marca blanca */
+    -fx-shape: "M10.4,1.3l-6.8,6.8L1.6,4.9L0.2,6.3l3.4,3.4l6.8-6.8L10.4,1.3z";
+}
+
+.check-box:selected .box {
+    -fx-background-color: #4CAF50; /* Fondo verde cuando está seleccionado */
+    -fx-border-color: #4CAF50;
+}
+
+
+/* --- RadioButton --- */
+.radio-button .radio {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #4CAF50;
+    -fx-background-radius: 1em;
+    -fx-padding: 4px;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #4CAF50;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #4CAF50; /* Punto interior verde */
+    -fx-background-insets: 0;
+    -fx-background-radius: 1em;
+}
+
+
+/* --- Slider --- */
+.slider .track {
+    -fx-background-color: #E8F5E9; /* Pista verde muy claro */
+    -fx-pref-height: 4px;
+    -fx-background-radius: 4px;
+}
+
+.slider .thumb {
+    -fx-background-color: #4CAF50; /* Pulgar verde */
+    -fx-background-radius: 1em;
+    -fx-pref-height: 14px;
+    -fx-pref-width: 14px;
+}
+
+
+/* --- ToggleButton --- */
+.toggle-button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 10px;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #4CAF50; /* Fondo verde cuando está seleccionado */
+    -fx-text-fill: #FFFFFF;
+}
+
+/* --- ProgressBar y ProgressIndicator --- */
+.progress-bar .track {
+    -fx-background-color: #E8F5E9;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 8px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #4CAF50; /* Barra verde */
+    -fx-background-radius: 5px;
+    -fx-background-insets: 0;
+}
+
+.progress-indicator {
+    -fx-progress-color: #4CAF50; /* Indicador verde */
+}

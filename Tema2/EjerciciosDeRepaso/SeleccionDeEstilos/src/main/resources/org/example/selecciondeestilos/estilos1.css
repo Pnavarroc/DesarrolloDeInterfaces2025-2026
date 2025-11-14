@@ -1,0 +1,91 @@
+/* Estilo para la caja del CheckBox (el cuadrado) */
+.check-box .box {
+    -fx-background-color: blue; /* Color de fondo inicial (blanco) */
+    -fx-border-color: red;     /* Color del borde (gris claro) */
+    -fx-border-radius: 5px;        /* Esquinas redondeadas */
+    -fx-padding: 5px;              /* Espaciado interno */
+}
+
+/* Estilo para la marca del CheckBox (el tick) cuando está seleccionado */
+.check-box:selected .mark {
+    -fx-background-color: #000000; /* Color de la marca (negro) */
+    -fx-shape: "M10.4,1.3l-6.8,6.8L1.6,4.9L0.2,6.3l3.4,3.4l6.8-6.8L10.4,1.3z"; /* Forma SVG para el tick */
+}
+
+/* Estilo para la caja del CheckBox cuando está seleccionado */
+.check-box:selected .box {
+    -fx-background-color: #3399FF; /* Color de fondo cuando está seleccionado (azul) */
+    -fx-border-color: #3399FF;     /* Color del borde cuando está seleccionado */
+}
+
+
+/* Estilo para el círculo exterior del RadioButton */
+.radio-button .radio {
+    -fx-background-color: #FFFFFF; /* Color de fondo inicial (blanco) */
+    -fx-border-color: #999999;     /* Color del borde (gris claro) */
+    -fx-background-radius: 1em;    /* Completamente redondo */
+    -fx-padding: 4px;              /* Espaciado interno */
+}
+
+/* Estilo para el círculo exterior del RadioButton cuando está seleccionado */
+.radio-button:selected .radio {
+    -fx-border-color: #3399FF;     /* Color del borde cuando está seleccionado (azul) */
+}
+
+/* Estilo para el punto interior del RadioButton cuando está seleccionado */
+.radio-button:selected .dot {
+    -fx-background-color: #3399FF; /* Color del punto interior (azul) */
+    -fx-background-insets: 0;      /* Asegura que el punto esté centrado y sin márgenes extraños */
+    -fx-background-radius: 1em;    /* Completamente redondo */
+}
+
+
+/* Estilo para la pista del Slider (la línea de fondo) */
+.slider .track {
+    -fx-background-color: #DDDDDD; /* Color de la pista (gris claro) */
+    -fx-pref-height: 5px;          /* Altura de la pista */
+    -fx-background-radius: 5px;    /* Esquinas redondeadas */
+}
+
+/* Estilo para el pulgar del Slider (el botón que se arrastra) */
+.slider .thumb {
+    -fx-background-color: #3399FF; /* Color del pulgar (azul) */
+    -fx-background-radius: 1em;    /* Completamente redondo */
+    -fx-pref-height: 15px;         /* Altura del pulgar */
+    -fx-pref-width: 15px;          /* Anchura del pulgar */
+}
+
+
+/* Estilo base para el ToggleButton */
+.toggle-button {
+    -fx-background-color: #E0E0E0; /* Color de fondo inicial (gris claro) */
+    -fx-text-fill: #000000;        /* Color del texto */
+    -fx-background-radius: 5px;    /* Esquinas redondeadas */
+    -fx-padding: 5px 10px;         /* Espaciado interno */
+}
+
+/* Estilo para el ToggleButton cuando está seleccionado/presionado */
+.toggle-button:selected {
+    -fx-background-color: #3399FF; /* Color de fondo cuando está seleccionado (azul) */
+    -fx-text-fill: #FFFFFF;        /* Color del texto cuando está seleccionado (blanco) */
+}
+
+
+/* Estilo para la pista del ProgressBar (la parte vacía) */
+.progress-bar .track {
+    -fx-background-color: #DDDDDD; /* Color de la pista (gris claro) */
+    -fx-background-radius: 5px;    /* Esquinas redondeadas */
+    -fx-pref-height: 10px;         /* Altura de la barra */
+}
+
+/* Estilo para la barra del ProgressBar (la parte llena) */
+.progress-bar .bar {
+    -fx-background-color: #3399FF; /* Color de la barra de progreso (azul) */
+    -fx-background-radius: 5px;    /* Esquinas redondeadas */
+    -fx-background-insets: 0;      /* Asegura que la barra ocupe todo el track */
+}
+
+/* Estilo para el ProgressIndicator */
+.progress-indicator {
+    -fx-progress-color: #FF0000; /* Color del indicador de progreso (rojo) */
+}

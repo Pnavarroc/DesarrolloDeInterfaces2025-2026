@@ -1,7 +1,5 @@
 .AnchorPane{
     -fx-background-color: red;
-    -fx-text-style: italic;
-    -fx-font-family:serif;
 
 }
 .label{

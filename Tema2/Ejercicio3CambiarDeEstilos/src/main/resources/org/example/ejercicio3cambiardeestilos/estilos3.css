@@ -1,0 +1,20 @@
+.AnchorPane{
+    -fx-background-color: purple;
+
+}
+.label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: italic;
+}
+
+.button{
+    -fx-font-family:serif;
+    -fx-background-color: green;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 18px;
+    -fx-text-fill: yellow;
+    -fx-font-style: italic;
+    -fx-border-color: white;
+    -fx-border-width:3px;
+}

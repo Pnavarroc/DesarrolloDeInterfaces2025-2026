@@ -1,0 +1,82 @@
+/* --- CheckBox --- */
+.check-box .box {
+    -fx-background-color: #333333; /* Fondo gris oscuro */
+    -fx-border-color: #FF9800;     /* Borde naranja */
+    -fx-border-radius: 2px;
+    -fx-padding: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #FFFFFF; /* Marca blanca */
+    -fx-shape: "M10.4,1.3l-6.8,6.8L1.6,4.9L0.2,6.3l3.4,3.4l6.8-6.8L10.4,1.3z";
+}
+
+.check-box:selected .box {
+    -fx-background-color: #FF9800; /* Fondo naranja cuando está seleccionado */
+    -fx-border-color: #FF9800;
+}
+
+
+/* --- RadioButton --- */
+.radio-button .radio {
+    -fx-background-color: #333333;
+    -fx-border-color: #FF9800;
+    -fx-background-radius: 1em;
+    -fx-padding: 4px;
+}
+
+.radio-button:selected .radio {
+    -fx-border-color: #FF9800;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #FF9800; /* Punto interior naranja */
+    -fx-background-insets: 0;
+    -fx-background-radius: 1em;
+}
+
+
+/* --- Slider --- */
+.slider .track {
+    -fx-background-color: #555555; /* Pista gris medio */
+    -fx-pref-height: 4px;
+    -fx-background-radius: 4px;
+}
+
+.slider .thumb {
+    -fx-background-color: #FF9800; /* Pulgar naranja */
+    -fx-background-radius: 1em;
+    -fx-pref-height: 14px;
+    -fx-pref-width: 14px;
+}
+
+
+/* --- ToggleButton --- */
+.toggle-button {
+    -fx-background-color: #555555;
+    -fx-text-fill: #FFFFFF;        /* Texto blanco */
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 10px;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #FF9800; /* Fondo naranja cuando está seleccionado */
+    -fx-text-fill: #000000;        /* Texto negro para mejor contraste */
+}
+
+/* --- ProgressBar y ProgressIndicator --- */
+.progress-bar .track {
+    -fx-background-color: #555555;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 8px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #FF9800; /* Barra naranja */
+    -fx-background-radius: 5px;
+    -fx-background-insets: 0;
+}
+
+.progress-indicator {
+    -fx-progress-color: #FF9800; /* Indicador naranja */
+}
