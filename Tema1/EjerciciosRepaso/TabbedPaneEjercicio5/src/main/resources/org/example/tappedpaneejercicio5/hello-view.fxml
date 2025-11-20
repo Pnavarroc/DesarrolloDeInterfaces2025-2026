@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tappedpaneejercicio5.HelloController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="23.0" layoutY="10.0" prefHeight="380.0" prefWidth="577.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="datosConductor" text="Datos Conductor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="14.0" layoutY="44.0" prefHeight="155.0" prefWidth="258.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nombre" />
+                              <Label text="Apellidos" GridPane.rowIndex="1" />
+                              <TextField fx:id="nombre" GridPane.columnIndex="1" />
+                              <TextField fx:id="apellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <CheckBox fx:id="coche" layoutX="70.0" layoutY="227.0" mnemonicParsing="false" onAction="#habilitarTab" text="Coche" />
+                        <CheckBox fx:id="monoVolumen" layoutX="70.0" layoutY="275.0" mnemonicParsing="false" onAction="#habilitarTab" text="Monovolumen" />
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cara.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="tCoche" text="Coche">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@coche.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="tMonovolumen" text="Monovolumen">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="68.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@monovolumen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

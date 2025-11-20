@@ -35,8 +35,6 @@ public class HelloController {
             rojo.getItems().add(i);
         }
 
-
-
     }
 
     @FXML
