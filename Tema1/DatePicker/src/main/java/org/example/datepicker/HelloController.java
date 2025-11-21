@@ -20,7 +20,7 @@ public class HelloController {
     }
     @FXML
     protected void cambiarFecha(){
-        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         textField.setText(diaSeleccionado.getValue().format(formateador));
 
     }

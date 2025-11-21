@@ -90,6 +90,7 @@ public class HelloController {
 
     @FXML
     protected void ponerCamposVacios(){
+
         campoNombre.clear();
         campoApellidos.clear();
         campoLocalidad.clear();
