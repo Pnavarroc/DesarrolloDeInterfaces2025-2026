@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejercicio12mostrarregistrosnuevaventana.HelloController">
+   <children>
+      <GridPane layoutX="125.0" layoutY="99.0" prefHeight="203.0" prefWidth="205.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID" />
+            <Label text="Titulo" GridPane.rowIndex="1" />
+            <Label text="Autor" GridPane.rowIndex="2" />
+            <Label text="ISBN" GridPane.rowIndex="3" />
+            <Label text="Paginas" GridPane.rowIndex="4" />
+            <Label text="Genero" GridPane.rowIndex="5" />
+            <Label text="Disponible" GridPane.rowIndex="6" />
+            <TextField fx:id="campoTitulo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="campoId" GridPane.columnIndex="1" />
+            <TextField fx:id="campoAutor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="campoISBN" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="campoPaginas" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="campoGenero" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="campoDisponible" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="primero" layoutX="80.0" layoutY="302.0" mnemonicParsing="false" onAction="#irPrimero" text="Primero" />
+      <Button fx:id="anterior" layoutX="144.0" layoutY="302.0" mnemonicParsing="false" onAction="#irAnterior" text="Anterior" />
+      <Button fx:id="siguiente" layoutX="220.0" layoutY="302.0" mnemonicParsing="false" onAction="#irSiguiente" text="Siguiente" />
+      <Button fx:id="ultimo" layoutX="300.0" layoutY="302.0" mnemonicParsing="false" onAction="#irUltimo" text="Ultimo" />
+      <Button fx:id="mostrarGeneros" layoutX="447.0" layoutY="166.0" mnemonicParsing="false" onAction="#abrirVentanaGeneros" text="Mostrar generos" />
+   </children>
+</AnchorPane>

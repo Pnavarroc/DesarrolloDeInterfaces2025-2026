@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ejercicio7busquedatablascomboboxcambioventana.HelloController">
+   <children>
+      <TableView fx:id="empleados" layoutX="36.0" layoutY="48.0" prefHeight="347.0" prefWidth="522.0">
+        <columns>
+          <TableColumn fx:id="cNombre" prefWidth="140.0" text="Nombre" />
+          <TableColumn fx:id="cApellidos" prefWidth="132.0" text="Apellidos" />
+            <TableColumn fx:id="cLocalidad" prefWidth="134.0" text="Localidad" />
+            <TableColumn fx:id="cSalario" prefWidth="115.0" text="Salario" />
+        </columns>
+      </TableView>
+      <TextField fx:id="campoLocalidad" layoutX="448.0" layoutY="14.0" />
+      <Label layoutX="36.0" layoutY="18.0" text="Seleccionar Localidad" />
+      <Button fx:id="mostrar" layoutX="399.0" layoutY="14.0" mnemonicParsing="false" onAction="#mostrarPorCiudadComboBox" text="Mostrar" />
+      <ComboBox fx:id="comboLocalidades" layoutX="194.0" layoutY="14.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
