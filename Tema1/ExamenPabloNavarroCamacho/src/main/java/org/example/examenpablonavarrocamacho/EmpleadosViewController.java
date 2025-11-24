@@ -44,6 +44,7 @@ public class EmpleadosViewController {
             cSalario.setCellValueFactory(new PropertyValueFactory<>("salario"));
             cDepartamento.setCellValueFactory(new PropertyValueFactory<>("departamento"));
             cSalarioNeto.setCellValueFactory(new PropertyValueFactory<>("salarioNeto"));
+            cSalarioNeto.setCellValueFactory(new PropertyValueFactory<>("salarioNeto"));
 
             rs = st.executeQuery("SELECT Nombre, Departamento, Salario  FROM empleados");
 

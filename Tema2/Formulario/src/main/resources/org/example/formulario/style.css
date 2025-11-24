@@ -1,0 +1,30 @@
+AnchorPane{
+    -fx-border-color: #7fff00;
+    -fx-border-width: 10px;
+}
+HBox{
+    -fx-background-color: blue;
+    -fx-alignment: center;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+Label{
+    -fx-text-fill: white;
+}
+Button{
+    -fx-max-width: infinity; /*Se expande en el ancho del contenedor*/
+    -fx-background-color: #dc143c; /* Color de fondo rojo */
+    -fx-text-fill: white;      /* Color del texto blanco */
+    -fx-font-size: 16px;       /* Tamaño de fuente */
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+CheckBox{
+    -fx-text-fill: grey;
+}
+TextField{
+    -fx-border-color: blue;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}

@@ -11,6 +11,7 @@ public class Empleado {
     private Double salario;
 
 
+
     public Empleado() {
     }
 
@@ -27,6 +28,7 @@ public class Empleado {
         this.nombre = nombre;
         this.departamento = departamento;
         this.salario = salario;
+
     }
 
     public Integer getId() {
