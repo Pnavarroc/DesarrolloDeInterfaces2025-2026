@@ -15,8 +15,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("JUEGAZOO!");
         stage.setScene(scene);
-        stage.getIcons().add(new
-                Image(getClass().getResourceAsStream("Desarrollo.png")));
+        stage.getIcons().add(new Image("Desarrollo.png"));
         stage.show();
     }
 
