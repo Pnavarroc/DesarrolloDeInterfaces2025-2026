@@ -1,0 +1,42 @@
+AnchorPane{
+    -fx-background-color: linear-gradient(to top,white,#C2F8FF);
+
+}
+#tituloPrincipal {
+    -fx-text-fill: #126900; /* Un color azul llamativo para el título */
+    -fx-font-weight: bold;
+}
+
+VBox{
+    -fx-font-weight: bold;
+}
+
+TextField{
+    -fx-background-radius: 40px;
+    -fx-border-radius: 40px;
+}
+Button{
+    -fx-background-color: #FFFF9E;
+    -fx-background-color: linear-gradient(to top,white,#FFFF9E);
+    -fx-background-radius: 40px;
+    -fx-border-radius: 40px;
+}
+.bajo-peso {
+    -fx-text-fill: #ffc107; /* Amarillo/Naranja */
+    -fx-font-weight: bold;
+}
+
+.peso-normal {
+    -fx-text-fill: #28a745; /* Verde */
+    -fx-font-weight: bold;
+}
+
+.sobrepeso {
+    -fx-text-fill: #fd7e14; /* Naranja fuerte */
+    -fx-font-weight: bold;
+}
+
+.obesidad {
+    -fx-text-fill: #dc3545; /* Rojo */
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,25 @@
+.AnchorPane{
+    -fx-background-color: black;
+
+}
+.label{
+
+    -fx-text-fill: black;
+    -fx-text-size: 25px;
+
+}
+
+.button{
+    -fx-background-color: darkcyan;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 18px;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width:3px;
+}
+.button:hover {
+    -fx-background-color: #008b8b;
+    -fx-border-color: #ccc;
+    -fx-text-fill: #eee;
+
+}
