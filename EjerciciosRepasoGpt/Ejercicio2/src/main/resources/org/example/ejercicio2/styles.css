@@ -1,0 +1,32 @@
+AnchorPane{
+    -fx-background-color: #D4EBFA;
+}
+
+CheckBox{
+    -fx-font-size: 14px;
+    -fx-text-fill: #1B212B;
+    -fx-padding: 5 0 5 0;
+}
+/*El color de fondo, si le pones despues de selected .mark solo cambia el color del tick*/
+CheckBox:selected {
+    -fx-background-color: #2e7d32;
+}
+
+/* Botón principal */
+Button {
+    -fx-background-color: #4fc3f7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-radius:6px;
+}
+
+/* Efecto hover */
+Button:hover {
+    -fx-background-color: #0288d1;
+}
+
+Label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}

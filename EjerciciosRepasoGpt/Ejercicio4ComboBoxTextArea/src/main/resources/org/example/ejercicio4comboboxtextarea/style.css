@@ -1,0 +1,24 @@
+AnchorPane {
+    -fx-background-color: #F4F7FA;
+}
+
+ComboBox {
+    -fx-font-size: 14px;
+}
+
+TextArea {
+    -fx-font-size: 13px;
+    -fx-control-inner-background: white;
+    -fx-border-color: #90CAF9;
+    -fx-border-radius: 4;
+}
+
+Button{
+    -fx-background-color: #64B5F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+Button:hover {
+    -fx-background-color: #1976D2;
+}

@@ -1,0 +1,37 @@
+/* Fondo general */
+AnchorPane {
+    -fx-background-color: #F3F6F9;
+}
+
+/* RadioButtons */
+RadioButton {
+    -fx-font-size: 15px;
+    -fx-text-fill: #263238;
+    -fx-padding: 5 0 5 0;
+}
+
+/* Punto del RadioButton cuando está seleccionado */
+RadioButton:selected .dot {
+    -fx-background-color: #1976D2;
+}
+
+/* Botón principal */
+Button {
+    -fx-background-color: #64B5F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18 8 18;
+    -fx-background-radius: 6;
+}
+
+/* Hover del botón */
+Button:hover {
+    -fx-background-color: #1976D2;
+}
+
+/* Label de resultado */
+Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #37474F;
+}

@@ -1,0 +1,122 @@
+/* =========================
+   FONDO GENERAL
+========================= */
+AnchorPane {
+    -fx-background-color: linear-gradient(to bottom right, #eef2f7, #dbe6f3);
+    -fx-padding: 15;
+}
+
+/* =========================
+   LABELS
+========================= */
+Label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* =========================
+   TEXTFIELDS
+========================= */
+TextField {
+    -fx-background-color: white;
+    -fx-border-color: #b0bec5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6;
+}
+
+TextField:focused {
+    -fx-border-color: #42a5f5;
+}
+
+/* =========================
+   COMBOBOX & DATEPICKER
+========================= */
+ComboBox,
+DatePicker {
+    -fx-background-color: white;
+    -fx-border-color: #b0bec5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+ComboBox:focused,
+DatePicker:focused {
+    -fx-border-color: #42a5f5;
+}
+
+/* =========================
+   RADIO BUTTON
+========================= */
+RadioButton {
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+Button {
+    -fx-background-color: #42a5f5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 18 8 18;
+    -fx-background-radius: 6;
+}
+
+Button:hover {
+    -fx-background-color: #1e88e5;
+}
+
+Button:pressed {
+    -fx-background-color: #1565c0;
+}
+
+/* =========================
+   TABLEVIEW
+========================= */
+TableView {
+    -fx-background-color: white;
+    -fx-border-color: #cfd8dc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* Cabecera */
+.table-view .column-header-background {
+    -fx-background-color: #42a5f5;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Filas */
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f5f7fa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #bbdefb;
+}
+
+/* =========================
+   ALERTS (extra pro)
+========================= */
+.dialog-pane {
+    -fx-background-color: #f9f9f9;
+}
+
+.dialog-pane .label {
+    -fx-font-size: 13px;
+}
