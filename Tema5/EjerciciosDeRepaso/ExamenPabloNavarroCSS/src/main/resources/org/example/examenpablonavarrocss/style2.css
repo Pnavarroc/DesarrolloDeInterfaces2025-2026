@@ -1,0 +1,32 @@
+Slider .track {
+    -fx-background-color: Blue;
+
+}
+
+AnchorPane{
+    -fx-background-color: green;
+}
+
+Slider .thumb {
+    -fx-background-color: green;
+
+}
+
+ToggleButton{
+    -fx-background-color: #FFFF9E;
+    -fx-background-color: linear-gradient(to top,white,blue);
+    -fx-background-radius: 40px;
+    -fx-border-radius: 40px;
+    -fx-text-fill: green;
+
+}
+ToggleButton:hover{
+    -fx-background-color:red;
+}
+
+ProgressIndicator {
+    -fx-progress-color: red;
+}
+Label{
+    -fx-text-fill: white;
+}

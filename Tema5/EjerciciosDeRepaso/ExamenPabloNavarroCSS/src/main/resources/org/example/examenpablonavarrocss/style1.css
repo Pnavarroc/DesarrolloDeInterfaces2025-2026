@@ -1,0 +1,32 @@
+/* Estilo base para el ToggleButton */
+ToggleButton {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+
+}
+Label{
+    -fx-font-size: 14px;
+    -fx-text-style:Tahoma;
+}
+
+/* Estilo para el ToggleButton cuando está seleccionado/presionado */
+ToggleButton:selected {
+    -fx-background-color: red; /* Color de fondo cuando está seleccionado (azul) */
+    -fx-text-fill: white;        /* Color del texto cuando está seleccionado (blanco) */
+}
+
+/* Estilo para el círculo exterior del RadioButton */
+RadioButton .radio {
+    -fx-border-color: green;
+    -fx-background-radius: 30px;
+}
+
+
+
+/* Estilo para el punto interior del RadioButton cuando está seleccionado */
+RadioButton:selected .dot {
+    -fx-background-color: red; /* Color del punto interior (azul) */
+
+}
+
