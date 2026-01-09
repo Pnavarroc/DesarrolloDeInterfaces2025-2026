@@ -1,6 +1,6 @@
 package org.example.examenprueba;
 
-import com.mysql.cj.conf.PropertyDefinitions;
+
 
 import java.sql.Date;
 
