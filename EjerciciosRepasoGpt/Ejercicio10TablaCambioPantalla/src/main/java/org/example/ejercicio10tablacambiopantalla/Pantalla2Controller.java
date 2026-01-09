@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Pantalla2Controller {
     @FXML
-    private TableView<Inscripcion> tabla;
+    private TableView<Inscripcion> tabla;   
 
     @FXML
     private TableColumn<Inscripcion, String> cNombre;
