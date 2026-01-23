@@ -1,4 +1,4 @@
-package org.example.ejerciciotablasautonomia;
+package org.example.datosempleadoscampocalculado;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -15,8 +15,6 @@ public class HelloController{
 
     Connection con;
     private ResultSet rs;
-    @FXML
-    private ComboBox<String> autonomia;
 
     @FXML
     private RadioButton normal;
@@ -31,10 +29,13 @@ public class HelloController{
     @FXML
     private TextField poblaMax;
 
+    @FXML
+    private Button mostrarInformeCampoCalculado;
+
 
     @FXML
     private void initialize(){
-        String url = "jdbc:mysql://localhost:3306/capitales";
+        String url = "jdbc:mysql://localhost:3306/datos";
         String user = "root";
         String pass = "1234";
 
@@ -43,17 +44,27 @@ public class HelloController{
 
             Statement statement = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
-            String sql = "select distinct(autonomía) from capitales.capitales";
+            String sql = "SELECT * from datos.empleados";
             rs = statement.executeQuery(sql);
-            while (rs.next()){
-                autonomia.getItems().add(rs.getString(1));
-            }
+
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
     }
+
+    @FXML
+    protected void mostrarInformeCampoCalculado() throws JRException {
+        JasperDesign d = JRXmlLoader.load("Informes/DatosEmpleadosCampoCalculado1.jrxml"); //+ "' and población Between '" + valormin + "' and '" + valormax
+        JRDesignQuery jq = new JRDesignQuery();
+        jq.setText("SELECT Nombre, Apellidos, Localidad , Salario, Salario*0.85 AS SalNeto FROM datos.empleados ");
+        d.setQuery(jq);
+        JasperReport jr = JasperCompileManager.compileReport(d);
+        JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
+        JasperViewer.viewReport(jp,false);
+    }
+
 
 
     @FXML
