@@ -1,0 +1,72 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="InformeSalariosMaxMin" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77c4c470-f5f0-4b49-8e5d-e323a585e79b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="datosEmpleado"/>
+	<parameter name="min" class="java.lang.String"/>
+	<parameter name="max" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[select * from datos.empleados WHERE Salario BETWEEN $P{min} AND $P{max} ]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Apellidos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.label" value="Apellidos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Localidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="Localidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<field name="Salario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleados"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="746b44bd-6d7a-48aa-85fe-efb7d62debd4" x="0" y="0" width="141" height="30">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e817331c-85c6-45fe-b065-07ad6be034fa"/>
+		</element>
+		<element kind="staticText" uuid="0ecc285a-6312-47a0-b0c8-b8d8a5bbe18b" x="141" y="0" width="138" height="30">
+			<text><![CDATA[Apellidos]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5314ec36-8cf0-4ac3-9d0a-117009df247c"/>
+		</element>
+		<element kind="staticText" uuid="b4f99230-3c12-4421-bd62-4160b3056bdf" x="279" y="0" width="138" height="30">
+			<text><![CDATA[Localidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529ed877-c54c-4c20-9a88-98c4cf2ad488"/>
+		</element>
+		<element kind="staticText" uuid="1e14648f-0c38-4b26-8097-d7539dcf6133" x="417" y="0" width="138" height="30">
+			<text><![CDATA[Salario]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbb8b84b-a592-46ec-8930-104b5ee83b3f"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="25adf912-a16d-4b61-9c6b-6ce5f3de3a4e" x="0" y="0" width="141" height="30">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e817331c-85c6-45fe-b065-07ad6be034fa"/>
+			</element>
+			<element kind="textField" uuid="7bf2bac1-5fa4-4118-b9a9-53d73cb52fdc" x="141" y="0" width="138" height="30">
+				<expression><![CDATA[$F{Apellidos}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5314ec36-8cf0-4ac3-9d0a-117009df247c"/>
+			</element>
+			<element kind="textField" uuid="dc2a4404-f8a2-451a-adce-f017b15d8581" x="279" y="0" width="138" height="30">
+				<expression><![CDATA[$F{Localidad}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529ed877-c54c-4c20-9a88-98c4cf2ad488"/>
+			</element>
+			<element kind="textField" uuid="feb97fad-da2f-43b3-acfb-0fad4eac6814" x="417" y="0" width="138" height="30">
+				<expression><![CDATA[$F{Salario}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbb8b84b-a592-46ec-8930-104b5ee83b3f"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
